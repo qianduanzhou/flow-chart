@@ -1,0 +1,35 @@
+{
+  "name": "flow-chart",
+  "version": "1.0.0",
+  "description": "流程图绘制库",
+  "main": "dist/bundle.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack serve --config ./build/webpack.config.dev.js",
+    "build": "webpack --config ./build/webpack.config.js"
+  },
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
+  "author": "zhb",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-jest": "^27.5.1",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "ts-loader": "^9.2.7",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  }
+}
