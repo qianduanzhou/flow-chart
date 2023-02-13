@@ -10,6 +10,8 @@
 
 该类传入一个对象，该对象有以下几个字段，其中**imgData**，**canvas**，**flowCanvas**，**ctx**，**flowCtx**必填，其他都可选。
 
+其中注意需要2个**canvas**和**context**实例，主**canvas**为绘制图标、标题、线段的容器，流动效果**canvas**则是流动动画效果的容器。
+
 ```typescript
  public imgData //图片列表
  public lineData //线段列表
@@ -100,6 +102,8 @@ let lineData: Array<LineObj> = [{
 
 ## 使用
 
+js部分
+
 ```typescript
 import CreateImgLineFlow from 'flow-chart';
 let canvas: HTMLCanvasElement = document.querySelector('#canvas');
@@ -162,4 +166,38 @@ let createImgLineFlow = new CreateImgLineFlow({
   flowCtx
 })
 createImgLineFlow.draw();
+```
+
+html及css部分
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #flowCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <canvas id="flowCanvas"></canvas>
+</body>
+</html>
 ```
