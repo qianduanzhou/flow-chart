@@ -1,6 +1,6 @@
 {
   "name": "flow-chart-canvas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "流程图绘制库",
   "main": "dist/bundle.js",
   "types": "dist/types/index.d.ts",
