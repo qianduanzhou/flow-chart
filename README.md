@@ -105,7 +105,7 @@ let lineData: Array<LineObj> = [{
 js部分
 
 ```typescript
-import CreateImgLineFlow from 'flow-chart';
+import CreateImgLineFlow from 'flow-chart-canvas';
 let canvas: HTMLCanvasElement = document.querySelector('#canvas');
 let flowCanvas: HTMLCanvasElement = document.querySelector('#flowCanvas');
 let { clientHeight, clientWidth } = canvas;
