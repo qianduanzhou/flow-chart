@@ -4,6 +4,5 @@ build/
 src/
 test/
 coverage/
-tsconfig.json
 babel.config.js
 jest.config.ts
