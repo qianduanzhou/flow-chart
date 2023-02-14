@@ -11,11 +11,7 @@ const config = {
         path: resolvePath('../dist'),
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-        alias: {
-            '@': resolvePath("../src"),
-            'core': resolvePath('../src/core')
-        }
+        extensions: ['.tsx', '.ts', '.js']
     },
     module: {
         rules: [{

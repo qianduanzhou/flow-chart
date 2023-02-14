@@ -178,7 +178,7 @@ class CreateImgLineFlow {
     // 梳理管线的关联关系
     this.lineData.forEach((lineObj: LineObj) => {
       lineObj.originLength = 0
-      lineObj.splitLines.forEach((v: SplitLine, i) => {
+      lineObj.splitLines.forEach((v: SplitLine) => {
         let x = Math.abs(v.paths[0][0] - v.paths[1][0]);
         let y = Math.abs(v.paths[0][1] - v.paths[1][1]);
         v.originLength = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
@@ -188,10 +188,10 @@ class CreateImgLineFlow {
       })
     })
     this.lineData.forEach(lineObj => {
-      lineObj.splitLines.forEach((v, i) => {
+      lineObj.splitLines.forEach((v) => {
         this.lineData.forEach(lineObj2 => {
           if (lineObj == lineObj2) return false
-          lineObj2.splitLines.forEach((v2, i) => {
+          lineObj2.splitLines.forEach((v2) => {
             if (v.paths[1][0] == v2.paths[0][0] && v.paths[1][1] == v2.paths[0][1]) {
               v.endLines.push(v2)
               v2.startLines.push(v)
@@ -405,7 +405,7 @@ class CreateImgLineFlow {
     let drawOneArrow = () => {
       ctx.clearRect(0, 0, flowCanvas.width, flowCanvas.height);
       this.setLineSpace();
-      this.lineData.forEach((lineObj, lineIndex) => {
+      this.lineData.forEach((lineObj) => {
         let { flowOption = {} } = lineObj;
         let { 
           flowWidth = 3, //箭头宽度
@@ -496,7 +496,7 @@ class CreateImgLineFlow {
         lineObj.lineSpace = lineSpace;
       }
     }
-    this.lineData.forEach((lineObj, i) => {
+    this.lineData.forEach((lineObj) => {
       lineObj.lineSpace = null
       setSpace(lineObj)
     })
